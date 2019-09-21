@@ -13,7 +13,7 @@ namespace NewDiscordBotDocumentViewer
 {
     public partial class Form1 : Form
     {
-        const string Version = "1.0";
+        const string Version = "1.1";
 
         public Form1()
         {
@@ -34,6 +34,7 @@ namespace NewDiscordBotDocumentViewer
         private void Form1_Load(object sender, EventArgs e)
         {
             richTextBox1.WordWrap = Properties.Settings.Default.WordWrap;
+            右端で折り返すToolStripMenuItem.Checked = Properties.Settings.Default.WordWrap;
             Text = "NewDiscordBotDocumentViewer " + Version;
         }
 
