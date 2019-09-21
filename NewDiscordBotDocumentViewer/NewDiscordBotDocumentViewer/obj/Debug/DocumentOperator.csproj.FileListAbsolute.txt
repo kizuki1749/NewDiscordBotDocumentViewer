@@ -1,0 +1,10 @@
+D:\GitHub Repository\DocumentOperator\DocumentOperator\DocumentOperator\bin\Debug\DocumentOperator.exe.config
+D:\GitHub Repository\DocumentOperator\DocumentOperator\DocumentOperator\bin\Debug\DocumentOperator.exe
+D:\GitHub Repository\DocumentOperator\DocumentOperator\DocumentOperator\bin\Debug\DocumentOperator.pdb
+D:\GitHub Repository\DocumentOperator\DocumentOperator\DocumentOperator\obj\Debug\DocumentOperator.csprojAssemblyReference.cache
+D:\GitHub Repository\DocumentOperator\DocumentOperator\DocumentOperator\obj\Debug\DocumentOperator.Form1.resources
+D:\GitHub Repository\DocumentOperator\DocumentOperator\DocumentOperator\obj\Debug\DocumentOperator.Properties.Resources.resources
+D:\GitHub Repository\DocumentOperator\DocumentOperator\DocumentOperator\obj\Debug\DocumentOperator.csproj.GenerateResource.cache
+D:\GitHub Repository\DocumentOperator\DocumentOperator\DocumentOperator\obj\Debug\DocumentOperator.csproj.CoreCompileInputs.cache
+D:\GitHub Repository\DocumentOperator\DocumentOperator\DocumentOperator\obj\Debug\DocumentOperator.exe
+D:\GitHub Repository\DocumentOperator\DocumentOperator\DocumentOperator\obj\Debug\DocumentOperator.pdb
