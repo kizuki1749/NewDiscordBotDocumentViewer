@@ -13,7 +13,7 @@ namespace NewDiscordBotDocumentViewer
 {
     public partial class Form1 : Form
     {
-        const string Version = "1.1";
+        const string Version = "1.2";
 
         public Form1()
         {
@@ -68,7 +68,7 @@ namespace NewDiscordBotDocumentViewer
         public void ReloadDocument()
         {
             NowPage = 1;
-            toolStripLabel1.Text = NowPage.ToString().PadRight(LoadedDocument.Pages.Count.ToString().Length) + "ページ / " + LoadedDocument.Pages.Count + "ページ";
+            toolStripLabel1.Text = NowPage.ToString() + "ページ / " + LoadedDocument.Pages.Count + "ページ";
             toolStripLabel2.Text = LoadedDocument.Title;
             JumpPageDocument(NowPage);
         }
@@ -89,7 +89,7 @@ namespace NewDiscordBotDocumentViewer
                 }
                 AddRichTextBoxText(a.Value);
             }
-            toolStripLabel1.Text = NowPage.ToString().PadRight(LoadedDocument.Pages.Count.ToString().Length) + "ページ / " + LoadedDocument.Pages.Count + "ページ";
+            toolStripLabel1.Text = NowPage.ToString() + "ページ / " + LoadedDocument.Pages.Count + "ページ";
         }
 
         public void AddRichTextBoxText(string Text, bool Bold = false)
@@ -129,6 +129,49 @@ namespace NewDiscordBotDocumentViewer
                 {
                     JumpPageDocument(goToPageDialog.SelectedPage);
                 }
+            }
+        }
+
+        private void ToolStripButton4_Click(object sender, EventArgs e)
+        {
+            if (LoadedDocument != null)
+            {
+                JumpPageDocument(1);
+            }
+        }
+
+        private void ToolStripButton5_Click(object sender, EventArgs e)
+        {
+            if (LoadedDocument != null)
+            {
+                JumpPageDocument(LoadedDocument.Pages.Count);
+            }
+        }
+
+        private void ToolStripButton6_Click(object sender, EventArgs e)
+        {
+            if (LoadedDocument != null)
+            {
+                richTextBox1.Text = "";
+                int count = 1;
+                foreach (var a1 in LoadedDocument.Pages)
+                {
+                    AddRichTextBoxText("\n\n--------------- " + count + "ページ ---------------");
+                    foreach (var a in a1.ConvertToDictionary())
+                    {
+                        if (richTextBox1.Text == "")
+                        {
+                            AddRichTextBoxText(a.Key + "\n", true);
+                        }
+                        else
+                        {
+                            AddRichTextBoxText("\n\n" + a.Key + "\n", true);
+                        }
+                        AddRichTextBoxText(a.Value);
+                    }
+                    count++;
+                }
+                toolStripLabel1.Text = "一覧表示";
             }
         }
     }
